@@ -33,7 +33,7 @@ destination_line = gets.chomp.to_sym
 say("#{destination_line}")
 
 say(subway[destination_line].key(destination).to_i)
-number_of_stops = (subway[destination_line].key(destination).to_i  - subway[origin_line].key(origin).to_i  ).abs
+number_of_stops = subway[destination_line].key(destination).to_i.abs  + subway[origin_line].key(origin).to_i.abs
 
 if origin_line == destination_line
   puts "Your destination is in #{number_of_stops} stops. \nPlease remember to take your bags"
