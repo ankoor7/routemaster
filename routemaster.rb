@@ -1,7 +1,7 @@
 require 'pry'
 require 'pry-debugger'
 $debug = false
-$verbose = true
+$verbose = false
 
 # Debug ##
 binding.pry if $debug
@@ -36,7 +36,9 @@ say(subway[destination_line].key(destination).to_i)
 number_of_stops = subway[destination_line].key(destination).to_i.abs  + subway[origin_line].key(origin).to_i.abs
 
 if origin_line == destination_line
-  puts "Your destination is in #{number_of_stops} stops. \nPlease remember to take your bags"
+  puts "Your destination is in #{number_of_stops} stops. "
 else
-  puts "You will go through #{number_of_stops} stops and you must change at Union Square. \nPlease remember to take your bags"
+  puts "You will go through #{number_of_stops} stops and you must change at Union Square. "
 end
+
+puts 'Please remember to take your bags'
